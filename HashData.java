@@ -46,35 +46,41 @@ public class HashData
         while (exit==0){
         System.out.println("Which one do you want to get info on?");
         System.out.println("Please input the number of the user. Ex: Fox is 1, Mithil 2, etc...");
-        int user= input.nextInt();
+        System.out.println("You can also input the name of the User as well");
+        String user= input.nextLine();
         
-        if (user==0) {
+        System.out.println(user + "'s info: ");
+        String userEmail = UserInfo.get(user);
+        System.out.println(userEmail);
+        System.out.println("Their password is: " + Password.get(userEmail));
+        
+        if (user.equals(0)) {
             exit=1;
     }
         
-        if(user==1) {
+        if(user.equals(1)) {
             System.out.println("Fox's info: ");
             System.out.println(UserInfo.get("Fox Davenport"));
             System.out.println("Their password is: " + Password.get("UltimateLifeForm@gmail.com") + "\n");
     } 
     
-    if(user==2) {
+    if(user.equals(2)) {
         System.out.println("Mithil's info: ");
         System.out.println(UserInfo.get("Mithil") + "\n");
     } 
 
-        if(user==3) {
+        if(user.equals(3)) {
             System.out.println("Daniel's info: ");
             System.out.println(UserInfo.get("Daniel Yang"));
             System.out.println("Their password is: " + Password.get("danielyang@yahoo.com") + "\n");
     }
     
-    if(user==4) {
+    if(user.equals(4)) {
         System.out.println("Mr John's info: ");
         System.out.println(UserInfo.get("Mr. John") + "\n");
     } 
     
-    if(user==5) {
+    if(user.equals(5)) {
         System.out.println("Alex's info: ");
         System.out.println(UserInfo.get("Alex") + "\n");
     } 
