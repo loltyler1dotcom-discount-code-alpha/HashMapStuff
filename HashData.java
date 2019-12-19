@@ -24,10 +24,11 @@ public class HashData
         
         //Input some user info
         //User named Fox Davenport and their email
-        UserInfo.put("Fox Davenport", "fox.davenport1@gmail.com");
+        UserInfo.put("Fox Davenport", "UltimateLifeForm@gmail.com");
         UserInfo.put("Daniel Yang", "danielyang@yahoo.com");
         UserInfo.put("Mithil", "HugeMuscleMithil@muscle.com");
         UserInfo.put("Alex", "BadCoder@terrible.com");
+        UserInfo.put("Mr. John", "OurLordandSavior@holy.com");
         
         System.out.println("Hi! Welcome to our mini databse! Please input a user you would like to learn about");
         System.out.println("Press 0 when you want to exit");
@@ -36,6 +37,12 @@ public class HashData
         Set<String> Username = UserInfo.keySet();
         System.out.println("Users: " + Username);
         
+        //New Hashmap for email link to password
+        Map<String, String> Password= new Hashtable<>();
+        Password.put("UltimateLifeForm@gmail.com", "Password");
+        Password.put("danielyang@yahoo.com", "Tyler1");
+        
+        //loops till user wants to exit
         while (exit==0){
         System.out.println("Which one do you want to get info on?");
         System.out.println("Please input the number of the user. Ex: Fox is 1, Mithil 2, etc...");
@@ -47,7 +54,8 @@ public class HashData
         
         if(user==1) {
             System.out.println("Fox's info: ");
-            System.out.println(UserInfo.get("Fox Davenport") + "\n");
+            System.out.println(UserInfo.get("Fox Davenport"));
+            System.out.println("Their password is: " + Password.get("UltimateLifeForm@gmail.com") + "\n");
     } 
     
     if(user==2) {
@@ -57,10 +65,16 @@ public class HashData
 
         if(user==3) {
             System.out.println("Daniel's info: ");
-            System.out.println(UserInfo.get("Daniel Yang") + "\n");
+            System.out.println(UserInfo.get("Daniel Yang"));
+            System.out.println("Their password is: " + Password.get("danielyang@yahoo.com") + "\n");
     }
     
     if(user==4) {
+        System.out.println("Mr John's info: ");
+        System.out.println(UserInfo.get("Mr. John") + "\n");
+    } 
+    
+    if(user==5) {
         System.out.println("Alex's info: ");
         System.out.println(UserInfo.get("Alex") + "\n");
     } 
